@@ -31,6 +31,13 @@ Route::prefix('/')->name('front.')->group(function () {
     Route::view('testimonials','front.testimonials')->name('testimonials');
 });
 
+Route::prefix('/admin/')->name('admin.')->group(function () {
+    //=================================================index page
+    Route::view('','admin.index')->name('index');
+    //=================================================login page
+    Route::view('login','admin.auth.login')->name('login');
+});
+
 //Route::get('/', function () {
 //    return view('welcome');
 //});
